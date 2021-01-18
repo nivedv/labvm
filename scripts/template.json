@@ -12,7 +12,7 @@
     "variables": {
         "GitHubScriptRepo": "microsoft/MCW-Modern-cloud-apps",
         "GitHubScriptRepoBranch": "master",
-        "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/')]",
+        "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/')]",  
 
         "uniqueString": "[uniqueString(resourceGroup().id)]",
 
@@ -212,29 +212,7 @@
             "sku": {
                 "name": "Standard_LRS"
             }
-        },
-        {
-    "apiVersion": "[providers('Microsoft.DevTestLab','labs').apiVersions[0]]",
-    "type": "microsoft.devtestlab/schedules",
-    "name": "[concat('shutdown-computevm-',variables('virtualMachineName')))]",
-    "location": "[resourceGroup().location]",
-    "dependsOn": [
-        "[concat('Microsoft.Compute/virtualMachines/',concat(variables('virtualMachineName'))))]"
-    ],
-    "properties": {
-        "status": "Enabled",
-        "taskType": "ComputeVmShutdownTask",
-        "dailyRecurrence": {
-            "time": "1900"
-        },
-        "timeZoneId": "India Standard Time",
-        "notificationSettings": {
-            "status": "Disabled",
-            "timeInMinutes": 15
-        },
-        "targetResourceId": "[resourceId('Microsoft.Compute/virtualMachines',concat(variables('India Standard Time'))))]"
-    }
-}
+        }
     ],
     "outputs": { }
 }
