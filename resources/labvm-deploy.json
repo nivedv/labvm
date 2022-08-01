@@ -22,16 +22,20 @@
         "defaultValue":"https://raw.githubusercontent.com/nivedv/labvm/master/resources/"
     },
     "autoShutdownStatus": {
-            "type": "string"
+            "type": "boolean",
+            "defaultValue: "true"
         },
         "autoShutdownTime": {
-            "type": "string"
+            "type": "string",
+            "defaultValue: "01:00 PM"
         },
         "autoShutdownTimeZone": {
-            "type": "string"
+            "type": "string",
+            "defaultValue: "UTC+5:30"
         },
         "autoShutdownNotificationStatus": {
-            "type": "string"
+            "type": "boolean"
+            "defaultValue": "false"
         },
         "autoShutdownNotificationLocale": {
             "type": "string"
