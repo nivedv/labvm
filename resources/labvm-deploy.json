@@ -183,7 +183,7 @@
                 "storageAccountType": "[variables('OSDiskType')]"
             }
           },
-          "licenseType": "Windows_Client"
+          
         },
         "networkProfile": {
           "networkInterfaces": [
